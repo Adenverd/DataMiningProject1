@@ -41,6 +41,11 @@ public class BaselineLearner extends SupervisedLearner {
         return columnMeans;
     }
 
+    /**
+     * Performs n-fold cross-validation on the data that was already trained on
+     * @param n
+     * @return
+     */
     public List<Double> nFoldCrossValidate(int n){
         if(n > featuresSize){
             throw new MLException(String.format("Cannot cross-validate with %d folds on a %d row matrix", n, featuresSize));
@@ -49,7 +54,39 @@ public class BaselineLearner extends SupervisedLearner {
             throw new MLException("Please train once before you cross-validate");
         }
 
-        List<Double>
+        int foldSize;
+        //Determine foldSize
+        if (featuresSize%n == 0){
+            foldSize = featuresSize/n;
+        }
+        else{
+            foldSize = (featuresSize/n) + 1;
+        }
 
+        //for each fold
+        for (int currentFold = 0; currentFold < n; currentFold++){
+            int foldStart = currentFold*foldSize;
+            int foldEnd = currentFold*(foldSize+1);
+            Matrix foldFeatures;
+            Matrix foldLabels;
+
+            //If we're on the last fold, set aside the remaining rows
+            if(currentFold == n-1){
+                foldFeatures = features.subMatrix(currentFold*foldSize, n);
+                foldLabels = features.subMatrix(currentFold*foldSize, n);
+            }
+
+            //Otherwise, set aside foldSize rows
+            else {
+                foldFeatures = features.subMatrix(currentFold*foldSize, (currentFold+1)*n);
+                foldLabels = features.subMatrix(currentFold*n, (currentFold+1)*n);
+            }
+
+            for(int j = 0; j < featuresSize; j++){
+                if(//j is not in the current fold)
+            }
+        }
+
+        return null;
     }
 }
