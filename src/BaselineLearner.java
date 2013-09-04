@@ -25,10 +25,10 @@ public class BaselineLearner extends SupervisedLearner {
     public void train(Matrix features, Matrix labels) {
         this.features = features;
         this.labels = labels;
-        featuresSize = features.getCols();
-        labelsSize = labels.getCols();
+        featuresSize = features.getNumCols();
+        labelsSize = labels.getNumCols();
 
-        for(int col = 0; col < labels.getCols(); col++){
+        for(int col = 0; col < labels.getNumCols(); col++){
             columnMeans.add(labels.columnMean(col));
         }
     }
@@ -49,15 +49,15 @@ public class BaselineLearner extends SupervisedLearner {
 
     public double getAccuracy() {
         double sum = 0;
-        for (int i = 0; i < features.getRows(); i++) {
+        for (int i = 0; i < features.getNumRows(); i++) {
             List<Double> out = new ArrayList<Double>();
-            List<Double> in = features.row(i);
+            List<Double> in = features.getRow(i);
 
             predict(in, out);
 
             double magnitude = 0;
-            for (int j = 0; j < labels.getCols(); j++) {
-                double result = labels.row(i).get(j) - out.get(j);
+            for (int j = 0; j < labels.getNumCols(); j++) {
+                double result = labels.getRow(i).get(j) - out.get(j);
                 magnitude += result * result;
             }
             sum += magnitude;
