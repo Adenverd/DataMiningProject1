@@ -34,34 +34,22 @@ public class BaselineLearner extends SupervisedLearner {
     }
 
     @Override
-    //Predict is assuming the the values are numerical/continuous
-    public void predict(List<Double> in, List<Double> out) {
-        out.clear();
-
-        if(in.size()!= featuresSize){
-            throw new MLException("Feature sizes don't match");
+    public List<Double> predict(List<Double> in) {
+        if (in.size()!=featuresSize){
+            throw new MLException(String.format("Unable to predict: in has %d rows, but learner was trained on %d rows.", in.size(), featuresSize));
         }
-
-        for(Double mean : columnMeans){
-            out.add(mean);
-        }
+        return columnMeans;
     }
 
-    public double getAccuracy() {
-        double sum = 0;
-        for (int i = 0; i < features.getNumRows(); i++) {
-            List<Double> out = new ArrayList<Double>();
-            List<Double> in = features.getRow(i);
-
-            predict(in, out);
-
-            double magnitude = 0;
-            for (int j = 0; j < labels.getNumCols(); j++) {
-                double result = labels.getRow(i).get(j) - out.get(j);
-                magnitude += result * result;
-            }
-            sum += magnitude;
+    public List<Double> nFoldCrossValidate(int n){
+        if(n > featuresSize){
+            throw new MLException(String.format("Cannot cross-validate with %d folds on a %d row matrix", n, featuresSize));
         }
-        return sum;
+        if (features == null){
+            throw new MLException("Please train once before you cross-validate");
+        }
+
+        List<Double>
+
     }
 }
