@@ -67,6 +67,7 @@ public class BaselineLearner extends SupervisedLearner {
         double sum = 0.0;
         //for each fold
         for (int fold = 0; fold < n; fold++){
+            //Determine fold start and end rows
             int foldStartRow = fold*foldSize;
             int foldEndRow = (fold+1)*foldSize > featureRows? featureRows : (fold+1)*foldSize;
 
