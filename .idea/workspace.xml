@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ea10b08d-9901-4334-a7e6-1e5fbc33babf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BaselineLearner.java" afterPath="$PROJECT_DIR$/src/BaselineLearner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DataMining2013F/src/ml/ColumnAttributes.java" afterPath="$PROJECT_DIR$/../DataMining2013F/src/ml/ColumnAttributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataMiningProject1.iml" afterPath="$PROJECT_DIR$/DataMiningProject1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DataMining2013F/src/ml/Matrix.java" afterPath="$PROJECT_DIR$/../DataMining2013F/src/ml/Matrix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataMiningProject1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378262350565" ignored="false" />
-    <file path="/BaselineLearner.java" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378266772429" ignored="false" />
+    <file path="/Dummy.txt" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378357024737" ignored="false" />
+    <file path="/BaselineLearner.java" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378357411100" ignored="false" />
     <file path="/Matrix.java" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378265946834" ignored="false" />
     <file path="/fragment.java" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378265277744" ignored="false" />
     <file path="/ColumnAttributes.java" changelist="ea10b08d-9901-4334-a7e6-1e5fbc33babf" time="1378265865166" ignored="false" />
@@ -81,7 +74,7 @@
       <file leaf-file-name="BaselineLearner.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BaselineLearner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="49" selection-start="2844" selection-end="2844" vertical-scroll-proportion="0.9028571">
+            <state line="80" column="39" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.722449">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +118,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -239,15 +232,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DataMining2013F" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager">
@@ -263,19 +256,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -303,6 +283,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -355,7 +348,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -370,7 +363,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24903475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -449,6 +442,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../DataMining2013F/src/ml/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="66" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BaselineLearner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../DataMining2013F/src/ml/ColumnAttributes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="36" selection-start="787" selection-end="787" vertical-scroll-proportion="0.43657142">
@@ -465,7 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BaselineLearner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="49" selection-start="2844" selection-end="2844" vertical-scroll-proportion="0.9028571">
+        <state line="80" column="39" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.722449">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

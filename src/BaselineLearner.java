@@ -46,47 +46,41 @@ public class BaselineLearner extends SupervisedLearner {
      * @param n
      * @return
      */
-    public List<Double> nFoldCrossValidate(int n){
-        if(n > featuresSize){
-            throw new MLException(String.format("Cannot cross-validate with %d folds on a %d row matrix", n, featuresSize));
-        }
-        if (features == null){
-            throw new MLException("Please train once before you cross-validate");
+    public static double nFoldCrossValidate(Matrix features, Matrix labels, int n){
+        int featureRows = features.getNumRows();
+
+        BaselineLearner learner = new BaselineLearner();
+
+        if(n > featureRows){
+            throw new MLException(String.format("Cannot cross-validate with %d folds on a %d row matrix", n, featureRows));
         }
 
         int foldSize;
         //Determine foldSize
-        if (featuresSize%n == 0){
-            foldSize = featuresSize/n;
+        if (featureRows%n == 0){
+            foldSize = featureRows/n;
         }
         else{
-            foldSize = (featuresSize/n) + 1;
+            foldSize = (featureRows/n) + 1;
         }
 
+        double sum = 0.0;
         //for each fold
-        for (int currentFold = 0; currentFold < n; currentFold++){
-            int foldStart = currentFold*foldSize;
-            int foldEnd = currentFold*(foldSize+1);
-            Matrix foldFeatures;
-            Matrix foldLabels;
+        for (int fold = 0; fold < n; fold++){
+            int foldStartRow = fold*foldSize;
+            int foldEndRow = (fold+1)*foldSize > featureRows? featureRows : (fold+1)*foldSize;
 
-            //If we're on the last fold, set aside the remaining rows
-            if(currentFold == n-1){
-                foldFeatures = features.subMatrix(currentFold*foldSize, n);
-                foldLabels = features.subMatrix(currentFold*foldSize, n);
-            }
+            Matrix tempFeatures = new Matrix(features);
+            Matrix tempLabels = new Matrix(labels);
 
-            //Otherwise, set aside foldSize rows
-            else {
-                foldFeatures = features.subMatrix(currentFold*foldSize, (currentFold+1)*n);
-                foldLabels = features.subMatrix(currentFold*n, (currentFold+1)*n);
-            }
+            Matrix foldFeatures = tempFeatures.removeFold(foldStartRow, foldEndRow);
+            Matrix foldLabels = tempLabels.removeFold(foldStartRow, foldEndRow);
 
-            for(int j = 0; j < featuresSize; j++){
-                if(//j is not in the current fold)
-            }
+            learner.train(tempFeatures, tempLabels);
+
+            sum += learner.getAccuracy(foldFeatures, foldLabels);
         }
 
-        return null;
+        return sum;
     }
 }
